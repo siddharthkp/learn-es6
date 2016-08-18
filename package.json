@@ -1,0 +1,31 @@
+{
+  "name": "learn-es6",
+  "version": "1.0.0",
+  "description": "Learn es6 while converting your code",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddharthkp/learn-es6.git"
+  },
+  "keywords": [
+    "learn",
+    "es6",
+    "es2015"
+  ],
+  "author": "siddharthkp",
+  "license": "MIT",
+  "bin": {
+    "learn": "index.js",
+    "learn-es6": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/siddharthkp/learn-es6/issues"
+  },
+  "homepage": "https://github.com/siddharthkp/learn-es6#readme",
+  "dependencies": {
+    "lebab": "2.1.1"
+  }
+}
