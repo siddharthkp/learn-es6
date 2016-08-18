@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/siddharthkp/learn-es6#readme",
   "dependencies": {
-    "lebab": "2.1.1",
+    "run-series": "1.1.4",
     "simple-git": "1.47.0",
     "vorpal": "1.11.4"
   }
