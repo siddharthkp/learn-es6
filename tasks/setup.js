@@ -12,9 +12,7 @@ let chalk;
 
 let initRepo = (callback) => {
     git.init();
-    git.status((err, response) => {
-        git.add(response.not_added, callback);
-    });
+    git.status((err, response) => git.add(response.not_added, callback));
 };
 
 /* Setup repo
@@ -37,7 +35,6 @@ let setupRepo = (callback) => {
 
 let handleUnsavedChanges = (callback) => {
     git.status((err, response) => {
-        console.log(response);
         if (response.modified.length) {
             console.log(chalk.red(`
                 You have local changes in your repository.
@@ -47,12 +44,6 @@ let handleUnsavedChanges = (callback) => {
     });
 };
 
-/* Setup complete */
-
-let setupComplete = () => {
-    console.log('setup complete');
-};
-
 /* Setup
  *
  * Get things ready for lessons
@@ -60,7 +51,7 @@ let setupComplete = () => {
 
 let setup = (vorpal) => {
     chalk = vorpal.chalk;
-    series([setupRepo, handleUnsavedChanges, setupComplete]);
+    return new Promise((resolve) => series([setupRepo, handleUnsavedChanges, () => resolve()]));
 };
 
 module.exports = setup;

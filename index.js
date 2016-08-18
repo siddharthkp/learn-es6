@@ -4,7 +4,10 @@ const vorpal = require('vorpal')();
 const chalk = vorpal.chalk;
 const tasks = require('./tasks/');
 
-tasks.setup(vorpal);
+var what = tasks.setup(vorpal);
+what.then(() => {
+    console.log('cool');
+});
 
 vorpal.delimiter(chalk.magenta.bold('∆'));
 
