@@ -15,3 +15,4 @@ Run `auto-install` in the repository you want to work in
 #### Credits
 
 @mohebifar and @nene for lebab which powers the transforms
+Brian Genisio and Miguel Castillo for learnharmany.org
