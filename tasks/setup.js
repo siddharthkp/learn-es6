@@ -50,9 +50,10 @@ let handleUnsavedChanges = (callback) => {
  * Get things ready for lessons
  */
 
-let setup = (vorpal) => {
-    chalk = vorpal.chalk;
-    return new Promise((resolve) => series([setupRepo, handleUnsavedChanges, () => resolve()]));
-};
+let setup = (vorpal) => new Promise((resolve) => series([
+    setupRepo,
+    handleUnsavedChanges,
+    resolve
+]));
 
 module.exports = setup;
