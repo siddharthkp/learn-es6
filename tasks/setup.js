@@ -1,10 +1,9 @@
 const series = require('run-series');
 const directory = process.cwd();
 const git = require('simple-git')(directory);
+const helpers = require('../helpers/');
+
 git.silent(true);
-
-let chalk;
-
 
 /* initRepo
  * git init and add all the files!
@@ -36,10 +35,10 @@ let setupRepo = (callback) => {
 let handleUnsavedChanges = (callback) => {
     git.status((err, response) => {
         if (response.modified.length) {
-            console.log(chalk.red(`
+            helpers.error(`
                 You have local changes in your repository.
-                Please, commit your changes or stash them before you can start learning.`));
-            process.exit();
+                Please, commit your changes or stash them before you can start learning.
+            `);
         } else callback();
     });
 };
