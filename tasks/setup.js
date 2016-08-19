@@ -39,6 +39,8 @@ let handleUnsavedChanges = (callback) => {
                 You have local changes in your repository.
                 Please, commit your changes or stash them before you can start learning.
             `);
+            // TODO: This callback is for debugging
+            callback();
         } else callback();
     });
 };
