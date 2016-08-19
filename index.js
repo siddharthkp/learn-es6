@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
 const vorpal = require('vorpal')();
-const chalk = vorpal.chalk;
 const tasks = require('./tasks/');
+const chalk = require('chalk');
 
 var what = tasks.setup(vorpal);
 what.then(() => {
