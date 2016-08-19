@@ -1,16 +1,15 @@
 #! /usr/bin/env node
 
-const cli = require('vorpal')();
 const tasks = require('./tasks/');
 const lessons = require('./lessons/');
 const chalk = require('chalk');
+const clear = require('clear');
+const inquirer = require('inquirer');
 
 let loadLesson = () => {
-    console.log(lessons);
+    let lesson = lessons[0];
+    clear();
+    for (let gyan of lesson.gyan) console.log(gyan);
 };
-
-cli.delimiter(chalk.magenta.bold('∆'));
-cli.command('e').action(() => null);
-cli.show();
 
 tasks.setup().then(loadLesson);
