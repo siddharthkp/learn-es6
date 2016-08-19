@@ -26,10 +26,12 @@
   },
   "homepage": "https://github.com/siddharthkp/learn-es6#readme",
   "dependencies": {
+    "cardinal": "0.7.1",
     "chalk": "1.1.3",
+    "clear": "0.0.1",
+    "inquirer": "1.1.2",
     "run-series": "1.1.4",
-    "simple-git": "1.47.0",
-    "vorpal": "1.11.4"
+    "simple-git": "1.47.0"
   },
   "devDependencies": {
     "eslint": "3.3.1",
