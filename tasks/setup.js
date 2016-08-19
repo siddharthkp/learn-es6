@@ -1,6 +1,7 @@
-const series = require('run-series');
 const directory = process.cwd();
+
 const git = require('simple-git')(directory);
+const series = require('run-series');
 const helpers = require('../helpers/');
 
 git.silent(true);
@@ -21,7 +22,7 @@ let initRepo = (callback) => {
  */
 
 let setupRepo = (callback) => {
-    git.status((err, response) => {
+    git.status((err) => {
         if (err && err.includes('Not a git repository')) initRepo(callback);
         else callback();
     });
