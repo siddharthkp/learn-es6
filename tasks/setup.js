@@ -50,7 +50,7 @@ let handleUnsavedChanges = (callback) => {
  * Get things ready for lessons
  */
 
-let setup = (vorpal) => new Promise((resolve) => series([
+let setup = () => new Promise((resolve) => series([
     setupRepo,
     handleUnsavedChanges,
     resolve
