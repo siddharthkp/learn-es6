@@ -2,7 +2,7 @@
 
 Learn es6 while converting your code.
 
-<gif-here>
+![demo gif](https://raw.githubusercontent.com/siddharthkp/learn-es6/demo-gif/demo.gif)
 
 #### Install
 
@@ -10,7 +10,7 @@ Learn es6 while converting your code.
 
 #### Usage
 
-Run `auto-install` in the repository you want to work in
+Run `learn` in the repository you want to work in
 
 #### Credits
 
