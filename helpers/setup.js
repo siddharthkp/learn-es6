@@ -38,6 +38,8 @@ let handleUnsavedChanges = (callback) => {
         if (response.modified.length) {
             throwError(`
                 You have local changes in your repository.
+                This will interfere with the lesson.
+
                 Please, commit your changes or stash them before you can start learning.
             `);
             // TODO: This callback is for debugging

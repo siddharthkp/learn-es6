@@ -1,5 +1,6 @@
 let lesson = {
-    title: 'Block Scope (let keyword)'
+    title: 'Lesson 1: Block Scope (let keyword)',
+    transform: 'let'
 };
 
 lesson.gyan = [
@@ -7,7 +8,14 @@ lesson.gyan = [
         type: 'text',
         value: `
 Up until ES6, variables (var) are always function scoped.
-
+         `
+    },
+    {
+        type: 'break'
+    },
+    {
+        type: 'text',
+        value: `
 It doesn't matter where you define your variable -- the variable is available anywhere within the function.
 This allows you to write code that you wouldn't expect to work.
         `
@@ -67,9 +75,6 @@ Like most languages, const values cannot be changed at runtime. Any code which t
 
     foo = "baz"; // evalutation error
         `
-    },
-    {
-        type: 'break'
     }
 ];
 
