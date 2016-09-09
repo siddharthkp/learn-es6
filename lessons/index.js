@@ -1,3 +1,5 @@
+const clear = require('clear');
+
 let lessonList = [
     'let-const',
     /*'arrow',
@@ -17,5 +19,17 @@ let lessonList = [
 let lessons = [];
 for (let name of lessonList) lessons.push (require('./' + name));
 
-module.exports = lessons;
+let render = (lesson) => {
+    console.log(lesson);
+};
+
+let index = 0;
+let start = () => {
+    clear();
+    render(lessons[index]);
+};
+
+module.exports = {
+    start
+};
 
