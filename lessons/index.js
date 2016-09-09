@@ -62,7 +62,7 @@ let transform = (lesson) => {
 let getIndex = () => {
     try {
         let response = fs.readFileSync(__dirname + '/learn-index.tmp', 'utf8');
-        return response;
+        return parseInt(response, 10);
     } catch (err) {
         if (err.code === 'ENOENT') updateIndex(0);
         return 0;
