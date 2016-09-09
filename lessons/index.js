@@ -8,15 +8,14 @@ let lessonList = [
     'arrow',
     //'for-of',
     'template-strings',
-    /*'arg-spread',
-    'obj-method',
-    'obj-shorthand',
-    'no-strict',
-    'commonjs',
-    'default-param',
-    'class',
-    'includes',
-    */
+    //'arg-spread',
+    //'obj-method',
+    //'obj-shorthand',
+    //'no-strict',
+    //'commonjs',
+    'default-params',
+    //'class',
+    //'includes',
     'finish'
 ];
 
