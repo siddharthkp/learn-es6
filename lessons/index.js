@@ -57,7 +57,7 @@ let start = () => {
     else if (index < lessons.length - 1) {
         helpers.progress.save(index + 1);
         start();
-    }
+    } else if (index === lessons.length -1) helpers.progress.save(0);
 };
 
 module.exports = {
