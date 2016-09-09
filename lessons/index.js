@@ -16,8 +16,9 @@ let lessonList = [
     'commonjs',
     'default-param',
     'class',
-    'includes'
+    'includes',
     */
+    'finish'
 ];
 
 let lessons = [];
@@ -54,9 +55,9 @@ let transform = (lesson) => {
     console.log(`Done! Use ${chalk.yellow('git diff')} to see the changes`);
     console.log(`You can commit these changes or you can stash/checkout them.`);
     console.log();
-    updateIndex(++index);
     console.log(`You can continue your lesson by typing ${chalk.yellow('learn')}`);
     console.log();
+    if (index < lessons.length - 1) updateIndex(++index);
 };
 
 let getIndex = () => {
@@ -75,6 +76,7 @@ let start = () => {
     clear();
     helpers.render(lesson);
     helpers.pause();
+    console.log(index, lessons.length);
     if (lesson.transform) transform(lesson);
     else {
         updateIndex(++index);
