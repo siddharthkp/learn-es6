@@ -5,8 +5,8 @@ const chalk = require('chalk');
 let lessonList = [
     'intro',
     'let-const',
-    /*'arrow',
-    'for-of',
+    'arrow',
+    /*'for-of',
     'template',
     'arg-spread',
     'obj-method',
@@ -30,7 +30,7 @@ let transform = (lesson) => {
     console.log(chalk.green(lesson.title));
 
     console.log();
-    console.log(`Let's convert ${chalk.red('var')} to ${chalk.blue('let/const')}`);
+    console.log(`Let's transform our code to use ${chalk.blue(lesson.prettyName)}`);
     console.log();
     helpers.pause();
     console.log();
@@ -45,7 +45,7 @@ let transform = (lesson) => {
     console.log();
     console.log(`You can continue your lesson by typing ${chalk.yellow('learn')}`);
     console.log();
-    if (index < lessons.length - 1) helpers.progress.save(index + 1);
+    helpers.progress.save(index + 1);
 };
 
 let start = () => {
@@ -54,9 +54,8 @@ let start = () => {
     clear();
     helpers.render(lesson);
     helpers.pause();
-    console.log(index, lessons.length);
     if (lesson.transform) transform(lesson);
-    else {
+    else if (index < lessons.length - 1) {
         helpers.progress.save(index + 1);
         start();
     }

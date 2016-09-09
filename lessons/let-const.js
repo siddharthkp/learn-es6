@@ -1,6 +1,7 @@
 let lesson = {
     title: 'Lesson 1: Block Scope (let keyword)',
-    transform: 'let'
+    transform: 'let',
+    prettyName: 'let/const'
 };
 
 lesson.gyan = [
