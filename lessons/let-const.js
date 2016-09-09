@@ -1,6 +1,3 @@
-const cardinal = require('cardinal');
-const chalk = require('chalk');
-
 let lesson = {
     title: 'Block Scope (let keyword)'
 };
