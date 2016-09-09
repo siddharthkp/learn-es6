@@ -2,7 +2,7 @@
 
 Learn es6 while converting your code.
 
-![demo gif](https://raw.githubusercontent.com/siddharthkp/learn-es6/demo-gif/demo.gif)
+![demo gif](https://raw.githubusercontent.com/siddharthkp/learn-es6/master/demo.gif)
 
 #### Install
 
