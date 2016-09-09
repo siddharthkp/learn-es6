@@ -2,7 +2,7 @@ const directory = process.cwd();
 
 const git = require('simple-git')(directory);
 const series = require('run-series');
-const helpers = require('../helpers/');
+const throwError = require('./error.js');
 
 git.silent(true);
 
@@ -36,7 +36,7 @@ let setupRepo = (callback) => {
 let handleUnsavedChanges = (callback) => {
     git.status((err, response) => {
         if (response.modified.length) {
-            helpers.error(`
+            throwError(`
                 You have local changes in your repository.
                 Please, commit your changes or stash them before you can start learning.
             `);

@@ -1,4 +1,6 @@
-let error = require('./error');
+const error = require('./error');
+const setup = require('./setup');
+const render = require('./render');
 
-module.exports = {error};
+module.exports = {error, setup, render};
 

@@ -2,7 +2,7 @@ const chalk = require('chalk');
 
 let error = (message) => {
     // TODO: This comment is for debugging
-    //console.log(chalk.red(message));
+    console.log(chalk.red(message));
     // process.exit(1);
 };
 

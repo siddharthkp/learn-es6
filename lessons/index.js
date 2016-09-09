@@ -1,4 +1,5 @@
 const clear = require('clear');
+const helpers = require('../helpers');
 
 let lessonList = [
     'let-const',
@@ -19,14 +20,10 @@ let lessonList = [
 let lessons = [];
 for (let name of lessonList) lessons.push (require('./' + name));
 
-let render = (lesson) => {
-    console.log(lesson);
-};
-
 let index = 0;
 let start = () => {
     clear();
-    render(lessons[index]);
+    helpers.render(lessons[index]);
 };
 
 module.exports = {
