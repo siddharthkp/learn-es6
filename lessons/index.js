@@ -1,5 +1,4 @@
 const clear = require('clear');
-const fs = require('fs');
 const helpers = require('../helpers');
 const chalk = require('chalk');
 
@@ -26,17 +25,6 @@ for (let name of lessonList) lessons.push (require('./' + name));
 
 let index = 0;
 
-let updateIndex = (index) => {
-    try {
-        let response = fs.writeFileSync(__dirname + '/learn-index.tmp', index);
-    } catch (err) {
-        console.log(chalk.yellow(`
-            Could not create temp file.
-            Your progress will not be saved
-        `));
-    }
-};
-
 let transform = (lesson) => {
     clear();
     console.log(chalk.green(lesson.title));
@@ -57,21 +45,11 @@ let transform = (lesson) => {
     console.log();
     console.log(`You can continue your lesson by typing ${chalk.yellow('learn')}`);
     console.log();
-    if (index < lessons.length - 1) updateIndex(++index);
-};
-
-let getIndex = () => {
-    try {
-        let response = fs.readFileSync(__dirname + '/learn-index.tmp', 'utf8');
-        return parseInt(response, 10);
-    } catch (err) {
-        if (err.code === 'ENOENT') updateIndex(0);
-        return 0;
-    }
+    if (index < lessons.length - 1) helpers.progress.save(index + 1);
 };
 
 let start = () => {
-    index = getIndex();
+    index = helpers.progress.get();
     let lesson = lessons[index];
     clear();
     helpers.render(lesson);
@@ -79,7 +57,7 @@ let start = () => {
     console.log(index, lessons.length);
     if (lesson.transform) transform(lesson);
     else {
-        updateIndex(++index);
+        helpers.progress.save(index + 1);
         start();
     }
 };
