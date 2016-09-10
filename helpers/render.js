@@ -2,6 +2,7 @@ const cardinal = require('cardinal');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const pause = require('./pause.js');
+const clear = require('clear');
 
 let render = (lesson) => {
     console.log(chalk.green(lesson.title));
@@ -9,6 +10,7 @@ let render = (lesson) => {
         if (step.type === 'text') console.log(step.value);
         else if (step.type === 'code') console.log(cardinal.highlight(step.value));
         else if (step.type === 'break') pause();
+        else if (step.type === 'clear') clear();
     }
 };
 
