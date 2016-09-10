@@ -10,7 +10,7 @@ let lessonList = [
     'template-strings',
     //'arg-spread',
     //'obj-method',
-    //'obj-shorthand',
+    'property-shorthand',
     //'no-strict',
     //'commonjs',
     'default-params',
