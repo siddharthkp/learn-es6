@@ -2,6 +2,9 @@ const clear = require('clear');
 const helpers = require('../helpers');
 const chalk = require('chalk');
 
+const directory = process.cwd();
+const git = require('simple-git')(directory);
+
 let lessonList = [
     'intro',
     'let-const',
@@ -32,19 +35,26 @@ let transform = (lesson) => {
     console.log(`Let's transform our code to use ${chalk.blue(lesson.prettyName)}`);
     console.log();
     helpers.pause();
+
+    helpers.transform(lesson.transform);
     console.log();
 
-    if (lesson.transform) helpers.transform(lesson.transform);
+    git.diffSummary((err, diff) => {
+        if (diff.files.length) {
+            require('child_process').execSync('git diff --stat', {stdio:[0,1,2]});
+            console.log();
+            console.log();
+            console.log(`Done! Use ${chalk.yellow('git diff')} to see the changes`);
+            console.log(`You can commit these changes or you can stash/checkout them.`);
+        } else {
+            console.log(`Looks like you don't need ${chalk.blue(lesson.prettyName)}`);
+        }
 
-    require('child_process').execSync('git diff --stat', {stdio:[0,1,2]});
-
-    console.log();
-    console.log(`Done! Use ${chalk.yellow('git diff')} to see the changes`);
-    console.log(`You can commit these changes or you can stash/checkout them.`);
-    console.log();
-    console.log(`You can continue your lesson by typing ${chalk.yellow('learn')}`);
-    console.log();
-    helpers.progress.save(index + 1);
+        console.log();
+        console.log(`You can continue your lesson by typing ${chalk.yellow('learn')}`);
+        console.log();
+        helpers.progress.save(index + 1);
+    });
 };
 
 let start = () => {
