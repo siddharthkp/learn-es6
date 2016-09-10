@@ -17,7 +17,7 @@ let lessonList = [
     //'no-strict',
     //'commonjs',
     'default-params',
-    //'class',
+    'class',
     'includes',
     'finish'
 ];
