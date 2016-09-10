@@ -17,6 +17,9 @@
   ],
   "author": "siddharthkp",
   "license": "MIT",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "bin": {
     "es6": "index.js"
   },
