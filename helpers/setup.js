@@ -46,7 +46,7 @@ let handleUnsavedChanges = (callback) => {
 
     Please commit your changes or stash them and try again.
 
-    Use learn --clean if you want to remove local changes.
+    Use es6 --clean if you want to remove local changes.
                 `));
                 process.exit();
             }

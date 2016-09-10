@@ -10,7 +10,7 @@ Learn es6 while converting your code.
 
 #### Usage
 
-Run `learn` in the repository you want to work in
+Run `es6` in the repository you want to learn in
 
 #### Credits
 
