@@ -22,7 +22,7 @@ Run `es6`
 
 #### Credits
 
-Most of the content is sourced from learnharmony.org
+Most of the content is sourced from [Learn Harmony](learnharmony.org)
 Thanks to [BrianGenisio](https://github.com/BrianGenisio) and [MiguelCastillo](https://github.com/MiguelCastillo) for that.
 
 This script uses [lebab](https://github.com/mohebifar/lebab) for transformation.
