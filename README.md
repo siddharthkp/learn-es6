@@ -20,6 +20,10 @@ Run `es6`
 
 `--restart`    Start from first lesson
 
+#### Disclaimer
+
+This is not a transpiler. Useful for learning purposes only.
+
 #### Credits
 
 Most of the content is sourced from [Learn Harmony](learnharmony.org)
