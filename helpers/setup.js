@@ -2,8 +2,7 @@ const directory = process.cwd();
 
 const git = require('simple-git')(directory);
 const series = require('run-series');
-const throwError = require('./error.js');
-
+const chalk = require('chalk');
 const argv = require('yargs').argv;
 
 git.silent(true);
@@ -41,14 +40,15 @@ let handleUnsavedChanges = (callback) => {
             if (argv.clean) {
                 git.checkout('.');
             } else {
-                throwError(`
+                console.log(chalk.red(`
     You have local changes in your repository.
     This will interfere with the lesson.
 
     Please commit your changes or stash them and try again.
 
-    Use learn --clean if you want to remove these changes.
-                `);
+    Use learn --clean if you want to remove local changes.
+                `));
+                process.exit();
             }
             // TODO: This callback is for debugging
             callback();
