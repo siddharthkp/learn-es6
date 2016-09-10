@@ -24,6 +24,10 @@ Run `es6`
 
 This is not a transpiler. Useful for learning purposes only.
 
+#### Show your support
+
+⭐ this repo
+
 #### Credits
 
 Most of the content is sourced from [Learn Harmony](learnharmony.org)
