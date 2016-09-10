@@ -1,5 +1,5 @@
 let lesson = {
-    title: 'Lesson 3: Template strings',
+    title: 'Lesson 4: Template strings',
     transform: 'template',
     prettyName: 'template strings'
 };

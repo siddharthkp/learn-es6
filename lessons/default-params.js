@@ -1,5 +1,5 @@
 let lesson = {
-    title: 'Lesson 4: Default Parameters',
+    title: 'Lesson 10: Default Parameters',
     transform: 'default-param',
     prettyName: 'default parameters'
 };
