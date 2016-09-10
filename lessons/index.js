@@ -45,13 +45,13 @@ let transform = (lesson) => {
             console.log();
             console.log(`Done! Use ${chalk.yellow('git diff')} to see the changes`);
             console.log(`You can commit these changes or you can stash/checkout them.`);
+            console.log();
+            console.log(`After you're done, resume your lesson by typing ${chalk.yellow('es6')}`);
         } else {
             console.log(`Looks like you don't need ${chalk.blue(lesson.prettyName)}`);
+            console.log();
+            console.log(`Resume your lesson by typing ${chalk.yellow('es6')}`);
         }
-
-        console.log();
-        console.log(`After you're done, resume your lesson by typing ${chalk.yellow('es6')}`);
-        console.log();
         helpers.progress.save(index + 1);
     });
 };
