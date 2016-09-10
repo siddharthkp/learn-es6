@@ -1,6 +1,7 @@
 let lesson = {
     title: 'Lesson 3: for-of',
     transform: 'for-of',
+    experimental: true,
     prettyName: 'for-of'
 };
 

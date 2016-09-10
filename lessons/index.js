@@ -34,6 +34,8 @@ let transform = (lesson) => {
     console.log();
     console.log(`Let's transform our code to use ${chalk.blue(lesson.prettyName)}`);
     console.log();
+    if (lesson.experimental) console.log(chalk.yellow('This transform is experimental and might not work'));
+    console.log();
     helpers.pause();
 
     helpers.transform(lesson.transform);
