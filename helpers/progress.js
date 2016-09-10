@@ -1,4 +1,6 @@
 const fs = require('fs');
+const argv = require('yargs').argv;
+
 let filename = __dirname + '/index-' + process.cwd().split('/').pop() + '.tmp';
 
 let get = () => {
@@ -21,5 +23,7 @@ let save = (index) => {
         `));
     }
 };
+
+if (argv.restart) save(0);
 
 module.exports = {get, save};
