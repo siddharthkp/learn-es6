@@ -15,6 +15,7 @@ let lessonList = [
     'class',
     'includes',
     'for-of',
+    'modules',
     'finish'
 ];
 
