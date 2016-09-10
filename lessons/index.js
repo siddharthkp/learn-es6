@@ -50,7 +50,7 @@ let transform = (lesson) => {
         }
 
         console.log();
-        console.log(`You can continue your lesson by typing ${chalk.yellow('learn')}`);
+        console.log(`After you're done, resume your lesson by typing ${chalk.yellow('learn')}`);
         console.log();
         helpers.progress.save(index + 1);
     });

@@ -34,7 +34,8 @@
     "readline-sync": "1.4.4",
     "run-series": "1.1.4",
     "simple-git": "1.47.0",
-    "sync-exec": "0.6.2"
+    "sync-exec": "0.6.2",
+    "yargs": "5.0.0"
   },
   "devDependencies": {
     "eslint": "3.3.1",

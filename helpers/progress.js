@@ -1,8 +1,9 @@
 const fs = require('fs');
+let filename = __dirname + '/index-' + process.cwd().split('/').pop() + '.tmp';
 
 let get = () => {
     try {
-        let response = fs.readFileSync(__dirname + '/learn-index.tmp', 'utf8');
+        let response = fs.readFileSync(filename, 'utf8');
         return parseInt(response, 10);
     } catch (err) {
         if (err.code === 'ENOENT') save(0);
@@ -12,7 +13,7 @@ let get = () => {
 
 let save = (index) => {
     try {
-        let response = fs.writeFileSync(__dirname + '/learn-index.tmp', index);
+        let response = fs.writeFileSync(filename, index);
     } catch (err) {
         console.log(chalk.yellow(`
             Could not create temp file.

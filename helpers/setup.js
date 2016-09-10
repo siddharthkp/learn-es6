@@ -4,6 +4,8 @@ const git = require('simple-git')(directory);
 const series = require('run-series');
 const throwError = require('./error.js');
 
+const argv = require('yargs').argv;
+
 git.silent(true);
 
 /* initRepo
@@ -36,12 +38,18 @@ let setupRepo = (callback) => {
 let handleUnsavedChanges = (callback) => {
     git.status((err, response) => {
         if (response.modified.length) {
-            throwError(`
-                You have local changes in your repository.
-                This will interfere with the lesson.
+            if (argv.clean) {
+                git.checkout('.');
+            } else {
+                throwError(`
+    You have local changes in your repository.
+    This will interfere with the lesson.
 
-                Please, commit your changes or stash them before you can start learning.
-            `);
+    Please commit your changes or stash them and try again.
+
+    Use learn --clean if you want to remove these changes.
+                `);
+            }
             // TODO: This callback is for debugging
             callback();
         } else callback();
