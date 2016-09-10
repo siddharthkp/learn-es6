@@ -18,7 +18,7 @@ let lessonList = [
     //'commonjs',
     'default-params',
     //'class',
-    //'includes',
+    'includes',
     'finish'
 ];
 
