@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Learn es6 while converting your code",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/siddharthkp/learn-es6.git"
+  "scripts": {
+    "start": "node index.js"
   },
+  "repository": "siddharthkp/learn-es6",
   "keywords": [
     "learn",
     "es6",
