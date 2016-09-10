@@ -1,7 +1,7 @@
 const fs = require('fs');
 const argv = require('yargs').argv;
 
-let filename = __dirname + '/index-' + process.cwd().split('/').pop() + '.tmp';
+let filename = '/tmp/index-' + process.cwd().split('/').pop() + '.tmp';
 
 let get = () => {
     try {
