@@ -1,4 +1,4 @@
-#### Learn the new features of ES6 through examples and converting your own code!
+### Learn the new features of ES6 through examples and converting your own code!
 
 [![npm](https://img.shields.io/npm/v/learn-es6.svg?maxAge=3600)](https://www.npmjs.com/package/learn-es6)
 [![Known
