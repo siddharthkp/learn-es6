@@ -1,5 +1,5 @@
 let lesson = {
-    title: 'Lesson 13: ES6 modules',
+    title: 'Lesson 9: ES6 modules',
     transform: 'commonjs',
     prettyName: 'ES6 modules'
 };

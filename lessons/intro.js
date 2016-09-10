@@ -6,7 +6,7 @@ lesson.gyan = [
     {
         type: 'text',
         value: `
-This script is designed to help you learn the new features of ES6 through examples and exploration of your own code!
+This script is designed to help you learn the new features of ES6 through examples and converting your own code!
 
 There are several micro-lessons about all of the new features in JavaScript. Have fun!
 

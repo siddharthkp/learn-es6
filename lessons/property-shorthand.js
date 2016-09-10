@@ -1,5 +1,5 @@
 let lesson = {
-    title: 'Lesson 7: Property Shorthand',
+    title: 'Lesson 4: Property Shorthand',
     transform: 'obj-shorthand',
     prettyName: 'property shorthand'
 };

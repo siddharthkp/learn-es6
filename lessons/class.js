@@ -1,5 +1,5 @@
 let lesson = {
-    title: 'Lesson 11: Classes',
+    title: 'Lesson 6: Classes',
     transform: 'class',
     prettyName: 'class'
 };

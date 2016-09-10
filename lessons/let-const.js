@@ -25,11 +25,11 @@ This allows you to write code that you wouldn't expect to work.
         type: 'code',
         value: `
     function fnScoped() {
-        if(true) {
+        if (true) {
             var zed = 'alive'; // zed is "hoisted" to the function block
         }
 
-        if(true) {
+        if (true) {
             console.log('zed is ' + zed); // zed is visible
         }
     }
@@ -50,7 +50,7 @@ This makes variables behave more like what you might expect.
         type: 'code',
         value: `
     function blockScoped() {
-        if(true) {
+        if (true) {
             let zed = 'alive'; // zed is not "hoisted" out of this block
         }
 
