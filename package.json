@@ -18,8 +18,7 @@
   "author": "siddharthkp",
   "license": "MIT",
   "bin": {
-    "learn": "index.js",
-    "learn-es6": "index.js"
+    "es6": "index.js"
   },
   "bugs": {
     "url": "https://github.com/siddharthkp/learn-es6/issues"
