@@ -10,9 +10,18 @@ Learn es6 while converting your code.
 
 #### Usage
 
-Run `es6` in the repository you want to learn in
+Open any git versioned repo on your terminal
+
+Run `es6`
+
+#### Options
+
+`--restart`    Start from first lesson
 
 #### Credits
 
-@mohebifar and @nene for lebab which powers the transforms
-Brian Genisio and Miguel Castillo for learnharmany.org
+Most of the content is sourced from learnharmony.org
+Thanks to @BrianGenisio and @MiguelCastillo for that.
+
+This script uses lebab for transformation.
+Thanks to the @mohebifar and @nene for their excellent work
