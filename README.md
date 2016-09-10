@@ -1,4 +1,4 @@
-### Learn ES6 through examples and converting your own code!
+### Learn ES6 through examples and converting your ES5 code!
 
 [![npm](https://img.shields.io/npm/v/learn-es6.svg?maxAge=3600)](https://www.npmjs.com/package/learn-es6)
 [![Known
