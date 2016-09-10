@@ -9,7 +9,6 @@ let lessonList = [
     'intro',
     'let-const',
     'arrow',
-    'for-of',
     'template-strings',
     //'arg-spread',
     //'obj-method',
@@ -19,6 +18,7 @@ let lessonList = [
     'default-params',
     'class',
     'includes',
+    'for-of',
     'finish'
 ];
 
