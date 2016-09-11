@@ -1,4 +1,5 @@
 const fs = require('fs');
+const chalk = require('chalk');
 const argv = require('yargs').argv;
 
 let filename = '/tmp/index-' + process.cwd().split('/').pop() + '.tmp';
