@@ -28,4 +28,4 @@ let save = (index) => {
 
 if (argv.restart) save(0);
 
-module.exports = {get,save};
+module.exports = {get, save};
