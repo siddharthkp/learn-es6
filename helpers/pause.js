@@ -1,7 +1,7 @@
 const readlineSync = require('readline-sync');
 
 let pause = () => {
-    readlineSync.question('Press any key to continue ...');
+    readlineSync.keyInPause();
 };
 
 module.exports = pause;
