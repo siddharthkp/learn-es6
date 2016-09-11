@@ -2,7 +2,8 @@ const fs = require('fs');
 const chalk = require('chalk');
 const argv = require('yargs').argv;
 
-let filename = '/tmp/index-' + process.cwd().split('/').pop() + '.tmp';
+let cwd = process.cwd();
+let filename = '/tmp/index-' + cwd.split(cwd.match(/[/\\]/)).pop() + '.tmp';
 
 let get = () => {
     try {
@@ -19,7 +20,7 @@ let save = (index) => {
         let response = fs.writeFileSync(filename, index);
     } catch (err) {
         console.log(chalk.yellow(`
-            Could not create temp file.
+            Could not create file ${filename}.
             Your progress will not be saved
         `));
     }
@@ -27,4 +28,4 @@ let save = (index) => {
 
 if (argv.restart) save(0);
 
-module.exports = {get, save};
+module.exports = {get,save};

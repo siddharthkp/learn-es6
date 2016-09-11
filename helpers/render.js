@@ -1,10 +1,10 @@
 const cardinal = require('cardinal');
 const chalk = require('chalk');
-const inquirer = require('inquirer');
 const pause = require('./pause.js');
 const clear = require('clear');
 
 let render = (lesson) => {
+    clear();
     console.log(chalk.green(lesson.title));
     for (let step of lesson.gyan) {
         if (step.type === 'text') console.log(step.value);
