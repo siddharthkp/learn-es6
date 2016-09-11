@@ -1,6 +1,6 @@
 {
   "name": "learn-es6",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Learn es6 while converting your code",
   "main": "index.js",
   "scripts": {
