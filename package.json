@@ -4,7 +4,9 @@
   "description": "Learn es6 while converting your code",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": "siddharthkp/learn-es6",
   "keywords": [
@@ -34,6 +36,8 @@
     "run-series": "1.1.4",
     "simple-git": "1.47.0",
     "sync-exec": "0.6.2",
-    "yargs": "5.0.0"
-  }
+    "yargs": "5.0.0",
+    "snyk": "^1.192.3"
+  },
+  "snyk": true
 }
