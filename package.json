@@ -34,6 +34,6 @@
     "run-series": "1.1.4",
     "simple-git": "1.47.0",
     "sync-exec": "0.6.2",
-    "yargs": "5.0.0"
+    "yargs": "10.0.0"
   }
 }
